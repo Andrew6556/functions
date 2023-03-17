@@ -68,11 +68,14 @@
 // palindrome("потоп") 
 
 // ____________________8 item__________________________
-// function animals(number_animals){
-//     // однострочный вариант с "?"
-//     return (number_animals == 1 ? `Вот вам ${number_animals} кродил`:
-//             number_animals == 2 ? `Вот вам ${number_animals} кродила`:
-//             `Вот вам ${number_animals} кродилов`)
-// }
+function animals(number_animals){
+    let last_digit = +number_animals.toString().slice(-1);
+    if (number_animals >= 11 && number_animals < 15){
+        return `Вот вам ${number_animals} кродилов`
+    }
+    return (last_digit == 1 ? `Вот вам ${number_animals} кродил`:
+            last_digit >= 2 && last_digit <= 4 ? `Вот вам ${number_animals} кродила`:
+            `Вот вам ${number_animals} кродилов`)
 
-// console.log(animals(+prompt("Сколько вам кродилов?")))
+}
+console.log(animals(+prompt("Сколько вам кродилов?")))
