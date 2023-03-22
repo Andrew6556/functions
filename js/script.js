@@ -69,8 +69,8 @@
 
 // ____________________8 item__________________________
 function animals(number_animals){
-    let last_digit = +number_animals.toString().slice(-1);
-    let last_two_digits = +number_animals.toString().slice(-2)
+    let last_digit      = +number_animals.toString().slice(-1);
+    let last_two_digits = +number_animals.toString().slice(-2);
     if (last_two_digits >= 11 && last_two_digits < 15){
         return `Вот вам ${number_animals} кродилов`
     }
