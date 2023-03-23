@@ -77,6 +77,5 @@ function animals(number_animals){
     return (last_digit == 1 ? `Вот вам ${number_animals} кродил`:
             last_digit >= 2 && last_digit <= 4 ? `Вот вам ${number_animals} кродила`:
             `Вот вам ${number_animals} кродилов`)
-
 }
-
+console.log(animals(+prompt("Сколько вам кродилов?")))
